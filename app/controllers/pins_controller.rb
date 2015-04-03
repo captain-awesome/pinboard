@@ -9,11 +9,12 @@ class PinsController < ApplicationController
 	end
 
 	def new
-		@pin = Pin.new
+		#curent_user is a method which comes from the devise gem
+		@pin = current_user.pins.build
 	end
 
 	def create
-		@pin = Pin.new(pin_params)
+		@pin = current_user.pins.build(pin_params)
 
 		if @pin.save
 			redirect_to @pin, notice: "Successfully created new Pin"
