@@ -8,7 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
-gem 'mysql2'
+gem 'pg'
 
 # Pinboard gems
 gem 'paperclip', '~> 4.2.1'
